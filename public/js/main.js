@@ -71,14 +71,21 @@ function inserePlacar(){
     var corpoTabela = $(".placar").find("tbody");
     var usuario = "Paiva";
     var numPalavras = $("#contador-palavras").text();
+    var botaoRemover = "<a class='botao-remover' href='#'><i class='small material-icons'>delete</i></a>";
 
     var linha = "<tr>"+
                     "<td>"+ usuario + "</td>"+
                     "<td>"+ numPalavras + "</td>"+
+                    "<td>"+ botaoRemover+ "</td>"+
                 "</tr>";
-    
+
     corpoTabela.prepend(linha);
 }
+
+$(".botao-remover").click(function (event) {
+    event.preventDefault();
+    $(this).parent().parent().remove();
+});
 
 function reiniciaJogo(){
     campo.attr("disabled", false);
