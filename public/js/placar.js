@@ -44,11 +44,10 @@ function novaLinha(usuario, palavras){
 function removeLinha(event){
     event.preventDefault();
     var linha = $(this).parent().parent();
-    tempo = 1000;
-    linha.fadeOut(tempo);
+    linha.fadeOut(1000);
     setTimeout(function () {
         linha.remove();
-    }, tempo);
+    }, 1000);
 }
 
 function mostraPlacar() {
