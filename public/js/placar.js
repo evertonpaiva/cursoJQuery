@@ -9,6 +9,18 @@ function inserePlacar(){
     linha.find(".botao-remover").click(removeLinha);
 
     corpoTabela.prepend(linha);
+    $(".placar").slideDown(500);
+    scrollPlacar();
+}
+
+function scrollPlacar(){
+    var posicaoPlacar = $(".placar").offset().top;
+    var posicaoPlacarPx = posicaoPlacar+"px";
+    $("body").animate(
+        {
+            scrollTop: posicaoPlacarPx
+        }, 1000
+    );
 }
 
 function novaLinha(usuario, palavras){
