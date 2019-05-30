@@ -31,7 +31,12 @@ function novaLinha(usuario, palavras){
 
 function removeLinha(event){
     event.preventDefault();
-    $(this).parent().parent().remove();
+    var linha = $(this).parent().parent();
+    tempo = 1000;
+    linha.fadeOut(tempo);
+    setTimeout(function () {
+        linha.remove();
+    }, tempo);
 }
 
 function mostraPlacar() {
