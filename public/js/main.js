@@ -15,5 +15,3 @@ campo.on("input", function () {
    var qtdCaracteres = conteudo.length;
    $("#contador-caracteres").text(qtdCaracteres);
 });
-
-console.log(campo);
