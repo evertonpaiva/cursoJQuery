@@ -81,6 +81,7 @@ function sincronizaPlacar(){
 function atualizaPlacar(){
     $.get("http://localhost:3000/placar",function (data) {
         $(data).each(function () {
+           linha.find(".botao-remover").click(removeLinha);
            var linha = novaLinha(this.usuario, this.pontos);
            $("tbody").append(linha);
         });
