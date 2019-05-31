@@ -1,0 +1,8 @@
+version: "2.2"
+services:
+  alura-node:
+    container_name: "alura-node"
+    image: node-jquery-local
+    ports:
+      - 3000:3000
+
